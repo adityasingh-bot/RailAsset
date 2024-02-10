@@ -1,0 +1,105 @@
+//Platforms
+
+###
+POST http://localhost:8082/platform/add
+content-type: application/json
+
+{
+    "station_name":"New Station Name",
+    "station_code":"NewStationCode121"
+}
+
+###
+PUT http://localhost:8082/platform/modify/65c71a28b88b2b94dca652fd
+content-type: application/json
+
+{
+    "station_name":"Gorakhpur",
+    "station_code":"GKP"
+}
+###
+GET http://localhost:8082/platform/getAll
+###
+GET http://localhost:8082/platform/getById/65c71a28b88b2b94dca652fd
+###
+DELETE http://localhost:8082/platform/delete/65c678969396be1262b31125
+###
+//End Of Platforms
+
+//Assets
+
+###
+POST http://localhost:8082/asset/add
+content-type: application/json
+
+{
+    "asset_code": "ast9999",
+    "asset_name": "Water Cooler",
+    "description": "Voltas Water Cooler",
+    "purchase_date": "2024-12-30T00:00:00.000Z",
+    "maintenance_life": 260,
+    "expiration_date":"2026-12-30T00:00:00.000Z"
+}
+
+###
+PUT http://localhost:8082/asset/modify/65c693ba41f6f03e6a3a7399
+content-type: application/json
+
+{
+    "asset_code": "ast999E1",
+    "asset_name": "Water Cooler",
+    "description": "Voltas Water Cooler",
+    "purchase_date": "2024-12-30T00:00:00.000Z",
+    "maintenance_life": 260,
+    "expiration_date":"2026-12-30T00:00:00.000Z"
+}
+###
+GET http://localhost:8082/asset/getAll
+###
+GET http://localhost:8082/asset/getById/65c697786178da5f5f96311c
+###
+DELETE http://localhost:8082/asset/delete/65c693ba41f6f03e6a3a7399
+###
+//End Of Asset
+
+
+//Allotment
+###
+POST http://localhost:8082/allotment/add
+content-type: application/json
+
+{
+    "station_name":"Gorakhpur",
+    "station_code":"GKP",
+    "asset_code":"ast99",
+    "asset_name":"Water Cooler",  
+    "description":"Voltas Water Cooler",
+    "allotment_date":"2025-12-31T00:00:00.000+00:00",
+    "maintenance_due_date":"2026-12-17T00:00:00.000+00:00",
+    "expiration_date": "2026-12-30T00:00:00.000+00:00"
+}
+
+###
+PUT http://localhost:8082/allotment/modify/65c71afdb88b2b94dca6530c
+content-type: application/json
+
+{
+    "station_name":"Gorakhpur",
+    "station_code":"GKP",
+    "asset_code":"ast99",
+    "asset_name":"Water Cooler",  
+    "description":"Voltas Water Cooler",
+    "allotment_date":"2024-12-31T00:00:00.000+00:00",
+    "maintenance_due_date":"2025-12-17T00:00:00.000+00:00",
+    "expiration_date": "2026-12-30T00:00:00.000+00:00"
+}
+
+###
+GET http://localhost:8082/allotment/getAll
+###
+GET http://localhost:8082/allotment/getById/65c71afdb88b2b94dca6530c
+###
+DELETE http://localhost:8082/allotment/delete/65c70a747cfabf8d855d05a5
+###
+
+//End of Allotment 

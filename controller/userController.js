@@ -13,7 +13,6 @@ exports.createUser = async (req, res)=>{
         await user.save();
         res.status(201).json({response: user});        
     }catch(err){
-        console.log(err);
         res.status(500).json({response: err})
     }
 }
