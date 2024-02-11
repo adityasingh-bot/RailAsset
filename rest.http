@@ -1,35 +1,57 @@
+// Users
+###
+POST http://localhost:8090/user/new
+content-type:application/json
+
+{
+    "username":"kavya",
+    "password":"kavya",
+    "role":"user"
+}
+
+###
+POST http://localhost:8090/user/login
+content-type:application/json
+
+{
+    "username":"aditya",
+    "password":"aditya"   
+}
+
+
+//End of USER
+
 //Platforms
-
 ###
-POST http://localhost:8082/platform/add
+POST http://localhost:8090/platform/add
 content-type: application/json
 
 {
-    "station_name":"New Station Name",
-    "station_code":"NewStationCode121"
+    "station_name":"Deoria",
+    "station_code":"DEOS"
 }
 
 ###
-PUT http://localhost:8082/platform/modify/65c71a28b88b2b94dca652fd
+PUT http://localhost:8090/platform/modify/65c8a093199c9e67148e089d
 content-type: application/json
 
 {
-    "station_name":"Gorakhpur",
-    "station_code":"GKP"
+    "station_name":"Deoria",
+    "station_code":"DEOS"
 }
 ###
-GET http://localhost:8082/platform/getAll
+GET http://localhost:8090/platform/getAll
 ###
-GET http://localhost:8082/platform/getById/65c71a28b88b2b94dca652fd
+GET http://localhost:8090/platform/getById/65c8a093199c9e67148e089d
 ###
-DELETE http://localhost:8082/platform/delete/65c678969396be1262b31125
+DELETE http://localhost:8090/platform/delete/65c8a093199c9e67148e089d
 ###
 //End Of Platforms
 
 //Assets
 
 ###
-POST http://localhost:8082/asset/add
+POST http://localhost:8090/asset/add
 content-type: application/json
 
 {
@@ -42,7 +64,7 @@ content-type: application/json
 }
 
 ###
-PUT http://localhost:8082/asset/modify/65c693ba41f6f03e6a3a7399
+PUT http://localhost:8090/asset/modify/65c8a34a15f19129dad151c2
 content-type: application/json
 
 {
@@ -54,18 +76,18 @@ content-type: application/json
     "expiration_date":"2026-12-30T00:00:00.000Z"
 }
 ###
-GET http://localhost:8082/asset/getAll
+GET http://localhost:8090/asset/getAll
 ###
-GET http://localhost:8082/asset/getById/65c697786178da5f5f96311c
+GET http://localhost:8090/asset/getById/65c8a34a15f19129dad151c2
 ###
-DELETE http://localhost:8082/asset/delete/65c693ba41f6f03e6a3a7399
+DELETE http://localhost:8090/asset/delete/65c8a34a15f19129dad151c2
 ###
 //End Of Asset
 
 
 //Allotment
 ###
-POST http://localhost:8082/allotment/add
+POST http://localhost:8090/allotment/add
 content-type: application/json
 
 {
@@ -80,7 +102,7 @@ content-type: application/json
 }
 
 ###
-PUT http://localhost:8082/allotment/modify/65c71afdb88b2b94dca6530c
+PUT http://localhost:8090/allotment/modify/65c8a3a315f19129dad151c9
 content-type: application/json
 
 {
@@ -95,11 +117,11 @@ content-type: application/json
 }
 
 ###
-GET http://localhost:8082/allotment/getAll
+GET http://localhost:8090/allotment/getAll
 ###
-GET http://localhost:8082/allotment/getById/65c71afdb88b2b94dca6530c
+GET http://localhost:8090/allotment/getById/65c8a3a315f19129dad151c9
 ###
-DELETE http://localhost:8082/allotment/delete/65c70a747cfabf8d855d05a5
+DELETE http://localhost:8090/allotment/delete/65c70a747cfabf8d855d05a5
 ###
 
 //End of Allotment 

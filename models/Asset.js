@@ -6,7 +6,10 @@ const mongoose = require('mongoose');
     purchase_date:Date,    
     maintenance_life:Number,
     expiration_date:Date
- },{ autoCreate: false, autoIndex: false });
+ },{ autoCreate: false, autoIndex: false, writeConcern: {
+   j: true,
+   wtimeout: 1000
+ } });
 
  const Asset = mongoose.model("platform_assets", schema);
 

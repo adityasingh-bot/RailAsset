@@ -29,7 +29,6 @@ exports.loginUser = async (req, res)=>{
             }
             res.status(200).json({response: `User LoggedIn as ${existingUser.role}` });        
         }catch(err){
-            console.log(err);
             res.status(500).json({response: err})
         }
 }

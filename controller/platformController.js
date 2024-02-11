@@ -38,6 +38,7 @@ exports.updatePlatform = async (req,res)=>{
             runValidators: true
         });
         if(!platform){
+            console.log("failed Msg")
             return res.status(404).json({ response: 'Platform not found' });
         }
         res.status(200).json({response: platform});
