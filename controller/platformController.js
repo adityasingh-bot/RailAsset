@@ -28,6 +28,7 @@ exports.getPlatforms = async (req,res)=>{
         }
         res.status(200).json({response: platform});
     }catch(err){
+        
         res.status(500).json({response: err});
     }
 }

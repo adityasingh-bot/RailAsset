@@ -1,5 +1,6 @@
 const User = require('../models/User');
 const bcrypt = require('bcrypt');
+const jwt = require('jsonwebtoken');
 
 exports.createUser = async (req, res)=>{
     try{
@@ -27,7 +28,9 @@ exports.loginUser = async (req, res)=>{
             if(!isPasswordvalid){
                 return res.status(401).json({response: "Invalid username or Password"});
             }
-            res.status(200).json({response: `User LoggedIn as ${existingUser.role}` });        
+            //Generate JWT Token and share that Token with LoggedIn Users
+            const token = jwt.sign({ username: username }, process.env.SECRET_CODE, { expiresIn: '1h' });
+            res.status(200).json({response: `User LoggedIn as ${existingUser.role}`, token:token });        
         }catch(err){
             res.status(500).json({response: err})
         }

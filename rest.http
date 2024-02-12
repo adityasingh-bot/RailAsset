@@ -4,9 +4,9 @@ POST http://localhost:8090/user/new
 content-type:application/json
 
 {
-    "username":"kavya",
-    "password":"kavya",
-    "role":"user"
+    "username":"super",
+    "password":"super",
+    "role":"super"
 }
 
 ###
@@ -27,8 +27,8 @@ POST http://localhost:8090/platform/add
 content-type: application/json
 
 {
-    "station_name":"Deoria",
-    "station_code":"DEOS"
+    "station_name":"Lucknow",
+    "station_code":"LKO"
 }
 
 ###
